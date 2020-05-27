@@ -16,5 +16,10 @@ pipeline {
                 }
             }
         }
+        stage('JAR Sign') {
+            steps {
+                venafiCodeSignWithJarSigner certLabel: 'Test-Jarsigner-Jarsigner---No-Approvals', extraArgs: '', file: 'target/algorithm-secret-1.0-SNAPSHOT.jar', timestampingServers: '', tppName: 'Venafi Demo Environment'
+            }       
+        }
     }
 }

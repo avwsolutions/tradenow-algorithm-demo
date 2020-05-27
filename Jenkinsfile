@@ -3,7 +3,7 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
-                mvn -h
+                sh 'mvn -h'
                 echo 'This is a mini pipeline.' 
             }
         }

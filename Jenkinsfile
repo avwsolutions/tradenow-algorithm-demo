@@ -1,6 +1,9 @@
 pipeline { 
     agent { label 'docker-slave' }
-    tools { maven 'tradenow-demo' }
+    tools {
+        maven 'tradenow-demo'
+        jdk 'tradenow-demo'
+     }
     stages { 
         stage('Build') { 
             steps { 

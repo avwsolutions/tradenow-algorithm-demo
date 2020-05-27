@@ -6,10 +6,9 @@ pipeline {
      }
     stages { 
         stage('Build') { 
-            steps { 
+            steps {
+                echo 'Start Maven Package process and run an Unit test'
                 sh 'mvn package'
-                echo 'This is a mini pipeline.'
-                GitHub hook trigger for GITScm polling
             }
             post {
                 success {

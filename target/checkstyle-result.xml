@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="/Users/avwinbox/customer/venafi/examples/tradenow-algorithm-demo/src/main/java/io/tradenow/algorithm/Secret.java">
+</file>
+<file name="/Users/avwinbox/customer/venafi/examples/tradenow-algorithm-demo/src/test/java/io/tradenow/algorithm/SecretTest.java">
+</file>
+</checkstyle>

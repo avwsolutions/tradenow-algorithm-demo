@@ -8,7 +8,13 @@ pipeline {
         stage('Build') { 
             steps { 
                 sh 'mvn package'
-                echo 'This is a mini pipeline.' 
+                echo 'This is a mini pipeline.'
+                GitHub hook trigger for GITScm polling
+            }
+            post {
+                success {
+                    junit 'target/surefire-reports/**/*.xml' 
+                }
             }
         }
     }

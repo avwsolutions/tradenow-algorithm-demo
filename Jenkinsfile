@@ -7,7 +7,7 @@ pipeline {
     stages { 
         stage('Build') { 
             steps { 
-                sh 'mvn -h'
+                sh 'mvn package'
                 echo 'This is a mini pipeline.' 
             }
         }

@@ -21,10 +21,16 @@ pipeline {
                 venafiCodeSignWithJarSigner certLabel: 'Test-Jarsigner-Jarsigner---No-Approvals', extraArgs: '', file: 'target/algorithm-secret-1.0-SNAPSHOT.jar', timestampingServers: '', tppName: 'Venafi Demo Environment'
             }       
         }
-         stage('JAR Validate') {
+        stage('JAR Validate') {
             steps {
                 venafiVerifyWithJarSigner certLabel: 'Test-Jarsigner-Jarsigner---No-Approvals', glob: 'target/*.jar', tppName: 'Venafi Demo Environment'
             }       
         }
+        stage('Reveal Secret') {
+            steps {
+                sh 'java -jar target/algorithm-secret-1.0-SNAPSHOT.jar'
+            }       
+        }
+
     }
 }
